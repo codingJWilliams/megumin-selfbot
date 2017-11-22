@@ -9,6 +9,7 @@ class PingCommand extends Command {
     }
 
     async exec(message) {
+        console.log(message.channel)
         var m = await message.channel.fetchMessages({limit: 10})
         message.reply(m);
         await message.delete();
